@@ -15,7 +15,7 @@ describe('getEncryptedData and setEncryptedData functions', () => {
     localStorage.setItem('testKey', encryptData(originalData, encryptionKey));
 
     // Call the getEncryptedData function
-    const result = await getEncryptedData('testKey', encryptionKey);
+    const result =  getEncryptedData('testKey', encryptionKey);
 
     // Assert the result
     expect(result).toEqual(originalData);
@@ -37,6 +37,16 @@ describe('getEncryptedData and setEncryptedData functions', () => {
     // Assert the result
     expect(decryptedData).toEqual(newData);
   });
+});
+
+it('should return undefined when no data is available using getEncryptedData', async () => {
+  const encryptionKey = 'SuperSecureKey';
+
+  // Call the getEncryptedData function when no data is available
+  const result =  getEncryptedData('nonExistentKey', encryptionKey);
+
+  // Assert the result
+  expect(result).toBeNull;
 });
 
 // Mock encryptData and decryptData functions for testing

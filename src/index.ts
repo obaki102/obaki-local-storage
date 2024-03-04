@@ -43,6 +43,9 @@ export function getEncryptedData<T>(
   encryptionKey: string,
 ) {
   const data = localStorage.getItem(key);
+  if (!data) {
+    return [];
+  }
   const decryptedData = decryptData(data as string, encryptionKey) as T | T[];
   return Array.isArray(decryptedData) ? decryptedData : [decryptedData];
 }
