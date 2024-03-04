@@ -60,7 +60,7 @@ const key = 'myEncryptedDataKey';
 const encryptionKey = 'SuperSecretKey';
 
 // Retrieve and decrypt data
-const decryptedData = await getEncryptedData(key, encryptionKey);
+const decryptedData =  getEncryptedData(key, encryptionKey);
 
 console.log('Decrypted Data:', decryptedData);
 
@@ -76,7 +76,7 @@ const encryptionKey = 'SuperSecretKey';
 const dataToStore = ['confidential', 'information'];
 
 // Encrypt and store data
-await setEncryptedData(key, dataToStore, encryptionKey);
+setEncryptedData(key, dataToStore, encryptionKey);
 
 console.log('Data encrypted and stored successfully.');
 

@@ -38,20 +38,20 @@ export async function getEncryptedCacheData<T>(
   return dataToSave;
 }
 
-export async function getEncryptedData<T>(
+export function getEncryptedData<T>(
   key: string,
   encryptionKey: string,
-): Promise<T[]> {
+) {
   const data = localStorage.getItem(key);
   const decryptedData = decryptData(data as string, encryptionKey) as T | T[];
   return Array.isArray(decryptedData) ? decryptedData : [decryptedData];
 }
 
-export async function setEncryptedData<T>(
+export function setEncryptedData<T>(
   key: string,
   data: T[],
   encryptionKey: string,
-): Promise<void> {
+) {
   const dataToStore = encryptData(data, encryptionKey);
   localStorage.setItem(key, dataToStore);
 }

@@ -1,6 +1,6 @@
 {
   "name": "obaki-local-storage",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": " `obaki-local-storage` is a TypeScript utility for caching and retrieving data from the browser's `localStorage`. It provides a flexible and reusable function, allowing developers to cache data, automatically refresh it when needed, and define a custom staleness duration. Ideal for scenarios where you want to efficiently manage cached data in web applications.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
