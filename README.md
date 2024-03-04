@@ -1,4 +1,4 @@
-# obaki-get-cache-data
+# obaki-local-storage
 
 [![npm version](https://badge.fury.io/js/obaki-local-storage.svg)](https://www.npmjs.com/package/obaki-local-storage)
 
